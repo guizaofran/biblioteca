@@ -29,4 +29,9 @@ public class LivroController {
     public LivroEntity criarLivro(@RequestBody LivroEntity novoLivro, @PathVariable Long autorID){
         return livroService.criarLivro(novoLivro, autorID);
     }
+
+    @DeleteMapping("/{id}")
+    public void deletarLivro(@PathVariable Long id){
+        livroService.deletarLivro(id);
+    }
 }

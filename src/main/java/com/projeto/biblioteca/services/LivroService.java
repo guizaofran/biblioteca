@@ -31,4 +31,8 @@ public class LivroService {
         novoLivro.setAutor(autor);
         return livroRepository.save(novoLivro);
     }
+
+    public void deletarLivro(Long id){
+       livroRepository.deleteById(id);
+    }
 }
